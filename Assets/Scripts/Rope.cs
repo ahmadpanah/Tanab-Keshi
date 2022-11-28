@@ -25,6 +25,7 @@ public class Rope : MonoBehaviour
 
         if (Mathf.Abs((Mathf.Abs(transform.position.y)) - Mathf.Abs(minMaxVerticalPos.y)) < 0.1f) {
             Debug.Log("Game Finished!");
+            Time.timeScale = 0;
         }
     }
 }
