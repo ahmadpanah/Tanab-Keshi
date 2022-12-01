@@ -28,6 +28,7 @@ public class Click : MonoBehaviour , IPointerDownHandler
 
     IEnumerator AutoClick() {
         while(true) {
+            Time.timeScale=1;
             var second = Random.Range(0.1f , 0.3f);
             yield return new WaitForSeconds(second);
             Pull();
