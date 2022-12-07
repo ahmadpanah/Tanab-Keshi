@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
     }
 
     public void OnePlayer() {
-        SceneManager.LoadScene("AIPlayer");
+        SceneManager.LoadScene("MenuLevel");
     }
 
     public void TwoPlayer() {

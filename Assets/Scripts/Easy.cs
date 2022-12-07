@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Click : MonoBehaviour , IPointerDownHandler
+public class Easy : MonoBehaviour , IPointerDownHandler
 {
-    [SerializeField] public int pullValue = 15;
+    [SerializeField] public int pullValue = 10;
     [SerializeField] bool isAi;
 
     public void Start() {
@@ -29,7 +29,7 @@ public class Click : MonoBehaviour , IPointerDownHandler
     IEnumerator AutoClick() {
         while(true) {
             Time.timeScale=1;
-            var second = Random.Range(0.1f , 0.6f);
+            var second = Random.Range(0.1f , 0.8f);
             yield return new WaitForSeconds(second);
             Pull();
         }

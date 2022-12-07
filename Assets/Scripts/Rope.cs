@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rope : MonoBehaviour
 {
@@ -24,8 +25,9 @@ public class Rope : MonoBehaviour
         transform.position = pos;
 
         if (Mathf.Abs((Mathf.Abs(transform.position.y)) - Mathf.Abs(minMaxVerticalPos.y)) < 0.1f) {
-            Debug.Log("Game Finished!");
+            Debug.Log("Game Finished!!");
             Time.timeScale = 0;
+            SceneManager.LoadScene("Menu");
         }
     }
 }
